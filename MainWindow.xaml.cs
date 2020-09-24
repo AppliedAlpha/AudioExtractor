@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using MediaToolkit;
 using Microsoft.Win32;
 
@@ -28,6 +30,7 @@ namespace AudioExtractor
             {
                 _filePath = openFileDialog.FileName;
                 MessageBox.Show($"다음 파일이 선택되었습니다.\n{_filePath}");
+                SelectedPath.Text = _filePath;
             }
         }
 
